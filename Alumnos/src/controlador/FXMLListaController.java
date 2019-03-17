@@ -111,6 +111,20 @@ public class FXMLListaController implements Initializable {
     tableColumnApPaterno.setCellValueFactory(new PropertyValueFactory<>("apPaterno"));
     tableColumnApMaterno.setCellValueFactory(new PropertyValueFactory<>("apMaterno"));
     gestionarEventos();
+
+    //Botones inactivos
+    buttonEditar.setDisable(true);
+    buttonEliminar.setDisable(true);
+    buttonLimpiar.setDisable(true);
+    buttonGuardar.setDisable(true);
+
+    //TextFields inactivos
+    textFieldMatricula.setDisable(true);
+    textFieldNombre.setDisable(true);
+    textFieldApPaterno.setDisable(true);
+    textFieldApMaterno.setDisable(true);
+
+    //Generación de conexión con la base de datos
     conexion.cerrar();
   }
 
@@ -149,6 +163,16 @@ public class FXMLListaController implements Initializable {
       @Override
       public void handle(ActionEvent event) {
         limpiarComponentes();
+
+        //Botones activos
+        buttonLimpiar.setDisable(false);
+        buttonGuardar.setDisable(false);
+        
+        //Activar textField
+        textFieldMatricula.setDisable(false);
+        textFieldNombre.setDisable(false);
+        textFieldApPaterno.setDisable(false);
+        textFieldApMaterno.setDisable(false);
         textFieldMatricula.requestFocus();
       }
     });
@@ -186,7 +210,16 @@ public class FXMLListaController implements Initializable {
       @Override
       public void handle(ActionEvent event) {
         try {
-          eliminarRegistro();
+          Alert dialogoAlerta = new Alert(AlertType.CONFIRMATION);
+          dialogoAlerta.setTitle("Eliminar alumno");
+          dialogoAlerta.setHeaderText(null);
+          dialogoAlerta.initStyle(StageStyle.UTILITY);
+          dialogoAlerta.setContentText("¿Estás seguro que desea eliminar el registro?");
+          //Se recibe la respuesta del usuario
+          Optional<ButtonType> result = dialogoAlerta.showAndWait();
+          if (result.get() == ButtonType.OK) {
+            eliminarRegistro();
+          }
         } catch (SQLException ex) {
           Logger.getLogger(FXMLListaController.class.getName()).log(Level.SEVERE, null, ex);
         }
