@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controlador.FXMLListaController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="600.0" layoutX="0.0" layoutY="2.0" stroke="WHITE" strokeType="INSIDE" width="1100.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="58.0" layoutX="0.0" layoutY="42.0" stroke="$x2" strokeType="INSIDE" width="1100.0">
+      <fill>
+        <Color blue="0.616" green="0.322" red="0.094" fx:id="x2" />
+      </fill>
+    </Rectangle>
+    <Button id="button" fx:id="buttonSalir" layoutX="956.0" layoutY="55.0" prefWidth="96.0" text="Salir" textAlignment="CENTER" textFill="$x2">
+      <font>
+        <Font name="Arial Bold" size="18.0" fx:id="x5" />
+      </font>
+    </Button>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <Label fx:id="labelAlumnos" layoutX="413.0" layoutY="42.0" text="ALUMNOS" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold" size="50.0" />
+      </font>
+    </Label>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="24.0" layoutX="0.0" layoutY="576.0" stroke="$x2" strokeType="INSIDE" width="1100.0">
+      <fill>
+        <Color blue="0.616" green="0.322" red="0.094" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="16.0" layoutX="0.0" layoutY="550.0" strokeType="INSIDE" width="1100.0">
+      <fill>
+        <Color blue="0.337" green="0.678" red="0.157" fx:id="x3" />
+      </fill>
+      <stroke>
+        <Color blue="0.337" green="0.678" red="0.157" fx:id="x6" />
+      </stroke>
+    </Rectangle>
+    <ImageView fx:id="imagePrincipal" fitHeight="150.0" fitWidth="200.0" layoutX="101.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../iconos/iconoPrincipal.png" />
+      </image>
+    </ImageView>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="298.0" layoutX="713.0" layoutY="168.0" stroke="$x4" strokeType="INSIDE" width="352.0">
+      <fill>
+        <Color blue="0.875" green="0.875" red="0.875" fx:id="x4" />
+      </fill>
+    </Rectangle>
+    <TextField fx:id="textFieldMatricula" layoutX="748.0" layoutY="209.0" prefWidth="287.0" />
+    <Label fx:id="labelMatricula" layoutX="748.0" layoutY="185.0" text="Matricula:" />
+    <TextField fx:id="textFieldNombre" layoutX="748.0" layoutY="270.0" prefWidth="287.0" />
+    <Label fx:id="labelNombre" layoutX="748.0" layoutY="247.0" text="Nombre:" />
+    <TextField fx:id="textFieldApPaterno" layoutX="748.0" layoutY="336.0" prefWidth="287.0" />
+    <Label fx:id="labelApPaterno" layoutX="748.0" layoutY="312.0" text="Apellido paterno:" />
+    <TextField fx:id="textFieldApMaterno" layoutX="746.0" layoutY="404.0" prefWidth="287.0" />
+    <Label fx:id="labelApMaterno" layoutX="748.0" layoutY="380.0" text="Apellido materno:" />
+    <Button id="button" fx:id="buttonAgregar" font="$x5" layoutX="108.0" layoutY="492.0" prefWidth="142.0" text="Agregar" textFill="$x2" />
+    <Button id="button" fx:id="buttonEditar" font="$x5" layoutX="271.0" layoutY="492.0" prefWidth="142.0" text="Editar" textFill="$x2" />
+    <Button id="button" fx:id="buttonEliminar" font="$x5" layoutX="441.0" layoutY="492.0" prefWidth="142.0" text="Eliminar" textFill="$x2" />
+    <Button id="button" fx:id="buttonGuardar" font="$x5" layoutX="902.0" layoutY="492.0" prefWidth="163.0" text="Guardar" textFill="$x2" />
+    <Button id="button" fx:id="buttonLimpiar" font="$x5" layoutX="713.0" layoutY="492.0" prefWidth="163.0" text="Limpiar" textFill="$x1" />
+    <TableView id="tableViewAlumno" fx:id="tableAlumnos" layoutX="55.0" layoutY="168.0" prefHeight="298.0" prefWidth="575.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="104.0" text="Matricula" fx:id="tableColumnMatricula" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="145.0" text="Nombre" fx:id="tableColumnNombre" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="161.0" text="Apellido Paterno" fx:id="tableColumnApPaterno" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="110.0" text="Apellido materno" fx:id="tableColumnApMaterno" />
+      </columns>
+    </TableView>
+    <Button fx:id="butoonCatalogoMaterias" font="$x5" layoutX="713.0" layoutY="120.0" mnemonicParsing="false" prefWidth="352.0" text="Catalogo materias" textFill="$x3" />
+  </children>
+</AnchorPane>

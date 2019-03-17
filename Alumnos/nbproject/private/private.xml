@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/galil/Documents/NetBeansProjects/Alumnos/src/interfazGrafica/FXMLMaterias.fxml</file>
+            <file>file:/C:/Users/galil/Documents/NetBeansProjects/Alumnos/src/Daos/AlumnoInterfaceDao.java</file>
+            <file>file:/C:/Users/galil/Documents/NetBeansProjects/Alumnos/src/Daos/Conexion.java</file>
+            <file>file:/C:/Users/galil/Documents/NetBeansProjects/Alumnos/src/alumno/Alumno.java</file>
+            <file>file:/C:/Users/galil/Documents/NetBeansProjects/Alumnos/src/controlador/FXMLListaController.java</file>
+            <file>file:/C:/Users/galil/Documents/NetBeansProjects/Alumnos/src/controlador/FXMLMateriasController.java</file>
+            <file>file:/C:/Users/galil/Documents/NetBeansProjects/Alumnos/src/alumnos/Alumnos.java</file>
+            <file>file:/C:/Users/galil/Documents/NetBeansProjects/Alumnos/src/alumnos/Materias.java</file>
+        </group>
+    </open-files>
+</project-private>
